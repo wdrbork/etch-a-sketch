@@ -10,9 +10,15 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     width: 352px;
+    border: solid black 1px;
 }
 
 .square {
-    padding: 10px;
+    width: 20px;
+    height: 20px;
     border: solid black 1px;
+}
+
+.black-square {
+    background-color: black;
 }
