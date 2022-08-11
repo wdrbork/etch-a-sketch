@@ -1,0 +1,18 @@
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sketchpad {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 352px;
+}
+
+.square {
+    padding: 10px;
+    border: solid black 1px;
+}
