@@ -1,21 +1,24 @@
 html {
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.size-button {
+    margin-bottom: 5px;
 }
 
 .sketchpad {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 352px;
+    width: 960px;
     border: solid black 1px;
 }
 
 .square {
-    width: 20px;
-    height: 20px;
     border: solid black 1px;
 }
 
