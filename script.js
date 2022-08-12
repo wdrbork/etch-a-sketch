@@ -1,5 +1,6 @@
 const GRID_WIDTH = 840;
-updateGrid(16);
+const DEFAULT_SIZE = 16;
+updateGrid(DEFAULT_SIZE);
 
 const sizeButton = document.querySelector('.size-button');
 sizeButton.addEventListener('click', () => {
