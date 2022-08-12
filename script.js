@@ -1,12 +1,21 @@
-const GRID_WIDTH = 960;
+const GRID_WIDTH = 840;
 updateGrid(16);
 
 const sizeButton = document.querySelector('.size-button');
 sizeButton.addEventListener('click', () => {
-    let newSize = parseInt(prompt("What would you like the new size to be? (New size " + 
-        "must be positive and no greater than 100)."));
+    let newSize = prompt("What would you like the new size to be? (New size " + 
+        "must be positive and no greater than 100).");
+    if (newSize === null) {
+        return;
+    }
+
+    newSize = parseInt(newSize);
     while (isNaN(newSize) || newSize < 1 || newSize > 100) {
         newSize = prompt("Invalid size. Please try again.");
+        if (newSize === null) {
+            return;
+        }
+        newSize = parseInt(newSize);
     }
 
     updateGrid(newSize);
@@ -17,6 +26,7 @@ function updateGrid(size) {
     const sketchpad = document.querySelector('.sketchpad');
     sketchpad.innerHTML = "";
 
+    sketchpad.style.width = GRID_WIDTH + 'px';
     for (let i = 0; i < size ** 2; i++) {
         const div = document.createElement('div');
         div.classList.add('square');
